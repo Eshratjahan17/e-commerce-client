@@ -1,0 +1,20 @@
+[
+  {
+    "name": "AirPods 3rd generation",
+    "picture": "https://i.ebayimg.com/images/g/L~AAAOSwSS1h6zqD/s-l500.jpg",
+    "price": "₹20,500",
+    "about": "The third-generation AirPods has an IPX4 rating, MagSafe charging case, and supports features like spatial audio."
+  },
+  {
+    "name": "AirPods Pro",
+    "picture": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/photo_1588156979435_379b9d365296.jpg",
+    "price": "₹26300",
+    "about": "Custom high-excursion Apple driver,Custom high dynamic range amplifier,Active NoiseCancellationTransparency mode,Vent system for pressure equalization,Spatial audio with dynamic head tracking1 Adaptive EQ."
+  },
+  {
+    "name": "AirPods 2nd generation",
+    "picture": "https://photos5.appleinsider.com/gallery/45080-88501-AirPods-2-vs-AirPods-3-xl.jpg",
+    "price": "₹14,100",
+    "about": "Dual beamforming microphones.Dual optical sensors Motion-detecting accelerometer.Speech-detecting accelerometer."
+  }
+]

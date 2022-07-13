@@ -1,0 +1,93 @@
+[
+  {
+    "name": "Apple iPhone X",
+    "picture": "https://www.cnet.com/a/img/resize/ade9787fd58c9e15df65e2d285826e22971ba387/2017/09/13/ed294d6b-36b7-4493-8364-add2d6a264bf/apple-091217-iphone-x-3986.jpg?auto=webp&fit=crop&height=675&width=1200",
+    "price": "₹64,789"
+  },
+  {
+    "name": "Apple iPhone 11 pro",
+    "picture": "https://www.apple.com/newsroom/images/tile-images/Apple_iPhone-11-Pro_Most-Powerful-Advanced_091019.jpg.landing-big_2x.jpg",
+
+    "price": "₹117,100"
+  },
+  {
+    "name": "Apple iPhone 12",
+    "picture": "https://www.apple.com/newsroom/images/product/iphone/standard/apple_iphone-12-spring21_lp_us_04202021.jpg.og.jpg?202206290424",
+    "price": "₹54,999"
+  },
+  {
+    "name": "Apple iPhone 12 Pro Max",
+    "picture": "https://expertreviews.b-cdn.net/sites/expertreviews/files/2020/11/apple_iphone_12_pro_max_review_7.jpg",
+    "price": "₹129,900"
+  },
+  {
+    "name": "Apple iPhone 13 Mini",
+    "picture": "https://www.sizescreens.com/wp-content/uploads/2021/11/Apple-iPhone-13-mini-Screen.jpg",
+    "price": "₹65,299"
+  },
+  {
+    "name": "Apple iPhone 13 Pro Max",
+    "picture": "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2022/05/25/1976695-iphone-13.jpg",
+    "price": "₹126,900"
+  },
+  {
+    "name": "MacBook Air",
+    "picture": "https://cdn.mos.cms.futurecdn.net/V77RHxVtRWt9oN8fUu6Gre.jpg",
+    "price": "₹119900.00"
+  },
+  {
+    "name": "MacBook Pro 13",
+    "picture": "https://images.apple.com/v/macbook-pro-13/k/images/overview/hero_endframe__bsza6x4fldiq_large_2x.jpg",
+    "price": "₹125,990"
+  },
+  {
+    "name": "MacBook Pro",
+    "picture": "https://9to5mac.com/wp-content/uploads/sites/6/2021/10/MacBook-Pro-2021.jpg?quality=82&strip=all&w=1000",
+    "price": "₹129900.00"
+  },
+  {
+    "name": "IMac",
+    "picture": "https://www.notebookcheck.net/fileadmin/Notebooks/Apple/iMac_27_Mid_2020/teaser1.png",
+    "price": "₹119,900"
+  },
+  {
+    "name": "Mac Pro",
+    "picture": "https://help.apple.com/assets/61804086EAFA8C6F1D59B7AD/61804089EAFA8C6F1D59B7C5/en_US/fbac8523b0d81e806024f9d46cb3b976.png",
+    "price": "₹ 169,900"
+  },
+  {
+    "name": "Apple Watch Series 7",
+    "picture": "https://helios-i.mashable.com/imagery/articles/03hHKeomT7OZQCemQBnnUZx/hero-image.fill.size_1248x702.v1657634010.png",
+    "price": "₹41,900"
+  },
+  {
+    "name": "Apple Watch SE",
+    "picture": "https://fdn.gsmarena.com/imgroot/news/20/09/apple-watch-series-6-se/-1200/gsmarena_001.jpg",
+    "price": "₹29,900"
+  },
+  {
+    "name": "Apple Watch Series3",
+    "picture": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/apple-watch-s3-og-202003_GEO_CA?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1585763290155",
+    "price": "₹20,900"
+  },
+  {
+    "name": "Apple Watch Nike",
+    "picture": "https://i.ytimg.com/vi/hs_6mefQwKI/maxresdefault.jpg",
+    "price": "₹29900"
+  },
+  {
+    "name": "AirPods 3rd generation",
+    "picture": "https://i.ebayimg.com/images/g/L~AAAOSwSS1h6zqD/s-l500.jpg",
+    "price": "₹20,500"
+  },
+  {
+    "name": "AirPods Pro",
+    "picture": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/photo_1588156979435_379b9d365296.jpg",
+    "price": "₹26300"
+  },
+  {
+    "name": "AirPods 2nd generation",
+    "picture": "https://photos5.appleinsider.com/gallery/45080-88501-AirPods-2-vs-AirPods-3-xl.jpg",
+    "price": "₹14,100"
+  }
+]

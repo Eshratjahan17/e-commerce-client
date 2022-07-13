@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../images/icons/logo.png';
 
 const Header = () => {
@@ -28,19 +29,19 @@ const Header = () => {
               class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>All Catagory</a>
+                <Link to="/allcatagory">All Catagory</Link>
               </li>
               <li tabindex="0">
-                <a>Iphone</a>
+                <Link to="/iphone">Iphone</Link>
               </li>
               <li>
-                <a>Mac </a>
+                <Link to="/mac">Mac</Link>
               </li>
               <li>
-                <a>Apple Watch</a>
+                <Link to="/applewatch">Apple Watch</Link>
               </li>
               <li>
-                <a>Air pods</a>
+                <Link to="/airpods">Airpods</Link>
               </li>
             </ul>
           </div>
@@ -51,7 +52,8 @@ const Header = () => {
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal p-0">
             <li>
-              <a
+              <Link
+                to="/allcatagory"
                 className="text-white
 
                 hover:underline
@@ -60,7 +62,7 @@ const Header = () => {
               "
               >
                 All Catagory
-              </a>
+              </Link>
             </li>
             <li
               className="text-white
@@ -70,25 +72,20 @@ const Header = () => {
               "
               tabindex="0"
             >
-              <a
+              <Link
+                to="/iphone"
                 className="text-white
                hover:underline
               hover:decoration-secondary hover:text-secondary
               
               "
               >
-              Iphone
-              </a>
+                Iphone
+              </Link>
             </li>
-            <li
-              className="text-white
-               hover:underline
-              hover:decoration-secondary hover:text-secondary
-              
-              "
-          
-            >
-              <a
+            <li>
+              <Link
+                to="/mac"
                 className="text-white
                hover:underline
               hover:decoration-secondary hover:text-secondary
@@ -96,7 +93,7 @@ const Header = () => {
               "
               >
                 Mac
-              </a>
+              </Link>
             </li>
             <li
               className="text-white
@@ -105,7 +102,7 @@ const Header = () => {
               
               "
             >
-              <a>Apple Watch</a>
+              <Link to="/applewatch">Apple Watch</Link>
             </li>
             <li
               className="text-white
@@ -114,12 +111,14 @@ const Header = () => {
               
               "
             >
-              <a>Air Pods</a>
+              <Link to="/airpods">Air Pods</Link>
             </li>
           </ul>
         </div>
         <div class="navbar-end">
-          <a class="btn btn-secondary">Signup</a>
+          <Link to="/signup" class="btn btn-secondary">
+            Signup
+          </Link>
         </div>
       </div>
     </div>
