@@ -1,5 +1,4 @@
 import React from 'react';
-import Airpods from './Airpods/Airpods';
 import AllProducts from './AllProducts';
 import Banner from './Banner';
 
@@ -8,7 +7,7 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <AllProducts></AllProducts>
-      <Airpods></Airpods>
+      
     </div>
   );
 };

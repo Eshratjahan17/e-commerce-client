@@ -6,6 +6,7 @@ import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import Iphone from './Components/Iphones/Iphone';
+import Login from './Components/Login';
 import MacBooks from './Components/MacBooks/MacBooks';
 import NotFound from './Components/NotFound';
 import SignUp from './Components/SignUp';
@@ -23,6 +24,7 @@ function App() {
         <Route path="/applewatch" element={<AppleWatchs></AppleWatchs>}></Route>
         <Route path="/airpods" element={<Airpods></Airpods>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
