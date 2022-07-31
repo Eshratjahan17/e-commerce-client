@@ -1,7 +1,7 @@
 import React from 'react';
-import { useCreateUserWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
 import github from "../images/icons/github.svg";
 import google from "../images/icons/google.png";
@@ -12,17 +12,25 @@ const Login = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
     useSignInWithGoogle(auth);
-  // const [signInWithFacebook, facebookUser, facebookLoading, facebookError] =
-  //   useSignInWithFacebook(auth);
+  
   const [signInWithGithub, githubUser, githubLoading, githubError] =
     useSignInWithGithub(auth);
+    const location=useLocation();
+    const navigate=useNavigate();
+    const from=location?.state?.from?.pathname || '/';
+    if(loading ||googleLoading ||githubLoading){
+
+    }
+    if(user ||googleUser ||githubUser){
+      navigate(from,{replace:true});
+    }
 
   const onSubmit = (data) => {
-    createUserWithEmailAndPassword(data.email, data.password);
+    signInWithEmailAndPassword(data.email, data.password);
     console.log(data);
   };
   return (

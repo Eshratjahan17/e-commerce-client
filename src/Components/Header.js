@@ -1,8 +1,17 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../firebase.init';
+import avatar from '../images/icons/avatar.svg';
 import logo from '../images/icons/logo.png';
 
 const Header = () => {
+  const [user,loading]=useAuthState(auth);
+  const logout =()=>{
+     signOut(auth);
+  }
+  console.log(user);
   return (
     <div>
       <div class="navbar bg-primary">
@@ -116,9 +125,39 @@ const Header = () => {
           </ul>
         </div>
         <div class="navbar-end">
-          <Link to="/signup" class="btn btn-secondary">
-            Signup
-          </Link>
+          {user ? (
+            <div class="dropdown dropdown-end">
+              <label tabindex="0" class=" m-1">
+                <div class="avatar placeholder">
+                  <div className="w-12">
+                    <span>
+                      <img src={avatar} alt="" />
+                    </span>
+                  </div>
+                </div>
+              </label>
+              <ul
+                tabindex="1"
+                class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-40"
+              >
+                <li>
+                  <a>My profile</a>
+                </li>
+                <li>
+                  <a>My orders</a>
+                </li>
+                <li>
+                  <Link onClick={logout} to="/" >
+                   Log out
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <Link to="/signup" class="btn btn-secondary">
+              Signup
+            </Link>
+          )}
         </div>
       </div>
     </div>
