@@ -1,5 +1,5 @@
-import React from 'react';
-import { useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import React, { useState } from 'react';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
@@ -7,6 +7,9 @@ import github from "../images/icons/github.svg";
 import google from "../images/icons/google.png";
 
 const Login = () => {
+  const [email,setEmail]=useState([]);
+  const [sendPasswordResetEmail, sending, resetError] =
+    useSendPasswordResetEmail(auth);
   const {
     register,
     handleSubmit,
@@ -32,6 +35,7 @@ const Login = () => {
   const onSubmit = (data) => {
     signInWithEmailAndPassword(data.email, data.password);
     console.log(data);
+    setEmail(data.email);
   };
   return (
     <div className="bg-primary py-8">
@@ -40,7 +44,6 @@ const Login = () => {
           <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100  ">
             <div class="card-body ">
               <form onSubmit={handleSubmit(onSubmit)}>
-                
                 <div class="form-control mx-auto">
                   <label class="label">
                     <p class="label-text">
@@ -108,7 +111,20 @@ const Login = () => {
                       </span>
                     )}
                   </label>
+                  <a
+                    onClick={async () =>{
+                       await sendPasswordResetEmail(email);
+                       alert("Sent email");
+                    } 
+                     
+                    }
+                    href=""
+                    class="label-text-alt text-blue-700"
+                  >
+                    Forget Password?
+                  </a>
                 </div>
+
                 <input
                   type="submit"
                   value="Log in"

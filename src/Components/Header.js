@@ -1,17 +1,39 @@
 import { signOut } from 'firebase/auth';
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../firebase.init';
+import useAllProducts from '../Hooks/useAllProducts';
 import avatar from '../images/icons/avatar.svg';
 import logo from '../images/icons/logo.png';
+import AllProducts from './AllProducts';
+import Banner from './Banner';
 
 const Header = () => {
   const [user,loading]=useAuthState(auth);
+  const [keyWord,setKeyWord]=useState([]);
+  const [search, setSearch] = useState([]);
+  const [allProducts, setAllProducts] = useAllProducts();
   const logout =()=>{
      signOut(auth);
   }
   console.log(user);
+  const searchValue = (e)=>{
+    setKeyWord(e.target.value);
+}
+  const handleSearch=async()=>{
+    console.log(keyWord);
+    let result = await fetch(`http://localhost:5000/allcatagory/${keyWord}`);
+    result= await result.json();
+    if(result){
+      
+      setSearch(result);
+      console.log(search);
+    }else{
+      setAllProducts();
+    }
+
+  }
   return (
     <div>
       <div class="navbar bg-primary">
@@ -125,6 +147,36 @@ const Header = () => {
           </ul>
         </div>
         <div class="navbar-end">
+          <div class="form-control mr-3">
+            <div class="input-group">
+              <input
+                onChange={searchValue}
+                type="text"
+                placeholder="Search…"
+                class="input input-bordered "
+              />
+              <Link
+                to="/searchProduct"
+                onClick={handleSearch}
+                class="btn btn-square"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </Link>
+            </div>
+          </div>
           {user ? (
             <div class="dropdown dropdown-end">
               <label tabindex="0" class=" m-1">
@@ -147,8 +199,8 @@ const Header = () => {
                   <a>My orders</a>
                 </li>
                 <li>
-                  <Link onClick={logout} to="/" >
-                   Log out
+                  <Link onClick={logout} to="/">
+                    Log out
                   </Link>
                 </li>
               </ul>
@@ -160,6 +212,8 @@ const Header = () => {
           )}
         </div>
       </div>
+      <Banner></Banner>
+      {<AllProducts search={search}></AllProducts>}
     </div>
   );
 };

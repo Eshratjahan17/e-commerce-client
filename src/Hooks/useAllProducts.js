@@ -11,7 +11,7 @@ const useAllProducts = () => {
     })
 
   },[])
-  return [allProducts];
+  return [allProducts, setAllProducts];
 };
 
 export default useAllProducts;

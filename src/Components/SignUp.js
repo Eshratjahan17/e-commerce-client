@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
 // import facebok from '../images/icons/facebook.png';
 import github from '../images/icons/github.svg';
 import google from '../images/icons/google.png';
 
 const SignUp = () => {
+
+const [passwordError,setPasswordError]=useState(false);
+ const location = useLocation();
+ const navigate = useNavigate();
+ const from = location?.state?.from?.pathname || "/";
+
   const {
     register,
     handleSubmit,
@@ -21,11 +27,19 @@ const SignUp = () => {
         //   useSignInWithFacebook(auth);
           const [signInWithGithub, githubUser, githubLoading, githubError] =
             useSignInWithGithub(auth);
+            if(user || googleUser || githubUser){
+               navigate(from, { replace: true });
+            }
             
   const onSubmit = (data) => 
   {
+    if(data.password !== data.confirmPassword){
+      setPasswordError("Password Didn't matched");
+      return;
+    }
     createUserWithEmailAndPassword(data.email, data.password);
     console.log(data);
+    
   }
  
  
@@ -115,25 +129,67 @@ const SignUp = () => {
                     )}
                   </label>
                 </div>
-                <input
-                  type="submit"
-                  value="Sign Up"
-                  className="btn  rounded-lg 
-                  border-none hover:bg-nutral hover:text-primary bg-secondary text-primary mt-5 "
-                />
+                <div class="form-control mx-auto">
+                  <label class="label">
+                    <p class="label-text">
+                      Confirm password <span className="text-red-600">*</span>
+                    </p>
+                  </label>
+                  <input
+                    type="password"
+                    placeholder="Re-type password "
+                    class="input input-bordered w-full max-w-xs"
+                    {...register("confirmPassword", {
+                      required: {
+                        value: true,
+                        message: "Password is reqiured",
+                      },
+                      minLength: {
+                        value: 6,
+                        message: "Password must be more than 6 charecters",
+                      },
+                    })}
+                  />
+                  <label class="label">
+                    {errors.password?.type === "required" && (
+                      <span class="label-text-alt text-red-500">
+                        {errors.password.message}
+                      </span>
+                    )}
+                    {errors.password?.type === "minLength" && (
+                      <span class="label-text-alt text-red-500">
+                        {errors.password.message}
+                      </span>
+                    )}
+                    {passwordError ? (
+                      <span class="label-text-alt text-red-500">
+                        {passwordError}
+                      </span>
+                    ) : (
+                      <span class="label-text-alt text-red-500">
+                       
+                      </span>
+                    )}
+                  </label>
+                </div>
+
+                {
+                  <input
+                    type="submit"
+                    value="Sign Up"
+                    className="btn  rounded-lg 
+                  border-none hover:bg-nutral hover:text-primary bg-secondary text-primary mt-5  "
+                  />
+                }
               </form>
             </div>
           </div>
           <div class=" lg:text-left pl-11  ">
-            {/* <img className="w-14 h-16 " src={logo} alt="" /> */}
             <div>
               <h1 class="  text-3xl font-bold text-white mb-5 ">
                 Social log in
               </h1>
               <div className="flex  mt-4 ">
-                {/* <button onClick={() => signInWithFacebook()}>
-                  <img className="w-11 h-11 mr-4" src={facebok} alt="" />
-                </button> */}
                 <button onClick={() => signInWithGoogle()}>
                   <img className="w-11 h-11 mr-4" src={google} alt="" />
                 </button>

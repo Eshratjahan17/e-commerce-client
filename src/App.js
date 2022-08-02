@@ -9,6 +9,7 @@ import Iphone from './Components/Iphones/Iphone';
 import Login from './Components/Login';
 import MacBooks from './Components/MacBooks/MacBooks';
 import NotFound from './Components/NotFound';
+import SearchProduct from './Components/SearchProduct';
 import SignUp from './Components/SignUp';
 
 function App() {
@@ -23,6 +24,10 @@ function App() {
         <Route path="/mac" element={<MacBooks></MacBooks>}></Route>
         <Route path="/applewatch" element={<AppleWatchs></AppleWatchs>}></Route>
         <Route path="/airpods" element={<Airpods></Airpods>}></Route>
+        <Route
+          path="/searchProduct"
+          element={<SearchProduct></SearchProduct>}
+        ></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
