@@ -6,8 +6,8 @@ import auth from '../firebase.init';
 import useAllProducts from '../Hooks/useAllProducts';
 import avatar from '../images/icons/avatar.svg';
 import logo from '../images/icons/logo.png';
-import AllProducts from './AllProducts';
 import Banner from './Banner';
+import Search from './Search';
 
 const Header = () => {
   const [user,loading]=useAuthState(auth);
@@ -26,11 +26,11 @@ const Header = () => {
     let result = await fetch(`http://localhost:5000/allcatagory/${keyWord}`);
     result= await result.json();
     if(result){
-      
       setSearch(result);
       console.log(search);
+
     }else{
-      setAllProducts();
+      
     }
 
   }
@@ -82,6 +82,19 @@ const Header = () => {
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal p-0">
+            <li>
+              <Link
+                to="/"
+                className="text-white
+
+                hover:underline
+              hover:decoration-secondary hover:text-secondary
+              
+              "
+              >
+                Home
+              </Link>
+            </li>
             <li>
               <Link
                 to="/allcatagory"
@@ -213,7 +226,9 @@ const Header = () => {
         </div>
       </div>
       <Banner></Banner>
-      {<AllProducts search={search}></AllProducts>}
+      {
+        <Search search={search}></Search>
+      }
     </div>
   );
 };
