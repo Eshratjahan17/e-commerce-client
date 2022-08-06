@@ -6,8 +6,9 @@ const AllProducts = () => {
  const [allProducts, setAllProducts] = useState([]);
   const [pageCount ,setPageCount]=useState(0);
   const [page,setPage]=useState(0);
+  const [size,setSize]=useState(5);
    useEffect(() => {
-     fetch(`http://localhost:5000/allcatagory?page=${page}`)
+     fetch(`http://localhost:5000/allcatagory?page=${page}&size=${size}`)
        .then((res) => res.json())
        .then((data) => {
          console.log(data);
@@ -40,10 +41,20 @@ const AllProducts = () => {
         <div class="btn-group mx-9 my-9">
           {[...Array(pageCount).keys()].map((number) => (
             <button
-            className={page === number? 'selected'  :'btn'}
-            onClick={()=>setPage(number)}
-             >{number+ 1}</button>
+              className={page === number ? "selected" : "btn"}
+              onClick={() => setPage(number)}
+            >
+              {number + 1}
+            </button>
           ))}
+          <select
+            className="border-yellow-600   rounded-lg border-2 ml-5"
+            onChange={(e) => setSize(e.target.value)}
+          >
+            <option value="5">5</option>
+            <option value="7">7</option>
+            <option value="10">10</option>
+          </select>
         </div>
       </div>
     </div>
