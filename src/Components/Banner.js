@@ -6,7 +6,7 @@ import banner4 from '../images/banner/banner4.jpg';
 
 const Banner = () => {
   return (
-    <div>
+    <div className=''>
       <div class="carousel w-full">
         <div id="slide1" class="carousel-item relative w-full">
           <img src={banner1}class="w-full" />

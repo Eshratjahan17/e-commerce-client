@@ -35,9 +35,9 @@ const Header = () => {
 
   }
   return (
-    <div>
+    <div className="">
       <div class="navbar bg-primary">
-        <div class="navbar-start">
+        <div class="navbar-start px-9">
           <div class="dropdown">
             <label tabindex="0" class="btn btn-secondary mr-10 lg:hidden">
               <svg
@@ -226,9 +226,7 @@ const Header = () => {
         </div>
       </div>
       <Banner></Banner>
-      {
-        <Search search={search}></Search>
-      }
+      {<Search search={search}></Search>}
     </div>
   );
 };

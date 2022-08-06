@@ -1,14 +1,22 @@
 [
   {
-    "picture": "http://placehold.it/32x32",
+    "picture": "https://fscl01.fonpit.de/userfiles/7687254/image/NextPit_SamsungFold_Flip_S21_Ultra_iPhone_12_Pro_Mini_2021.jpg",
     "name": "Phone"
   },
   {
-    "picture": "http://placehold.it/32x32",
+    "picture": "https://photos5.appleinsider.com/gallery/48966-95776-surface-laptop-go-2-vs-m2-macbook-air-xl.jpg",
     "name": "Laptop"
   },
   {
-    "picture": "http://placehold.it/32x32",
+    "picture": "https://static-01.daraz.com.np/p/7006221c6653c362431ddb967bdb2683.jpg",
     "name": "Smart Watch"
+  },
+  {
+    "picture": "https://images.macrumors.com/t/FfYuAP3c3R3WOeCfzCEEDFACqWE=/2322x/article-new/2021/05/AirPods-Lineup-Feature-Triad.jpg",
+    "name": "Headphone/Airbuds"
+  },
+  {
+    "picture": "https://micromaxinfo.com/pub/media/catalog/category/Smart-TV_Banner_1.png",
+    "name": "Smart TV"
   }
 ]

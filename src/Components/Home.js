@@ -1,5 +1,4 @@
 import React from 'react';
-import AllProducts from './AllProducts';
 import Catagories from './Catagories/Catagories';
 
 
@@ -8,7 +7,7 @@ const Home = () => {
     <div>
       <Catagories></Catagories>
       
-   <AllProducts></AllProducts>
+   
       
     </div>
   );
