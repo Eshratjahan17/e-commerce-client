@@ -14,7 +14,7 @@ const AllProducts = () => {
          console.log(data);
          setAllProducts(data);
        });
-   }, [page]);
+   }, [page, size]);
   useEffect(()=>{
     fetch("http://localhost:5000/productCount")
       .then((res) => res.json())

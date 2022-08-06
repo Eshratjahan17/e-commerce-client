@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import auth from '../firebase.init';
 import useAllProducts from '../Hooks/useAllProducts';
 import avatar from '../images/icons/avatar.svg';
-import logo from '../images/icons/logo.png';
+import logo from '../images/logo.svg';
 import Banner from './Banner';
 import Search from './Search';
 
