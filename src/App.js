@@ -3,7 +3,6 @@ import './App.css';
 import Airpods from './Components/Airpods/Airpods';
 import AllProducts from './Components/AllProducts';
 import AppleWatchs from './Components/AppleWatchs/AppleWatchs';
-import Banner from './Components/Banner';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Home from './Components/Home';
@@ -16,9 +15,8 @@ import SignUp from './Components/SignUp';
 
 function App() {
   return (
-    <div>
+    <div className="bg-base-200">
       <Header></Header>
-      
 
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>

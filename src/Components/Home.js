@@ -4,7 +4,7 @@ import Catagories from './Catagories/Catagories';
 
 const Home = () => {
   return (
-    <div>
+    <div >
       <Catagories></Catagories>
       
    
