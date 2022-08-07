@@ -14,6 +14,7 @@ const Catagories = () => {
 {
   catagories.map(catagory=> <Catagory
   catagory={catagory}
+  
   ></Catagory>)
 }
         </div>

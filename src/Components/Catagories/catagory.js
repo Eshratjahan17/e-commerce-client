@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Catagory = ({ catagory }) => {
   const {name,picture}=catagory;
+  console.log(catagory);
   const [hover,setHover]=useState(false);
  const  onmouseenter=(e)=>{
     setHover(true);
@@ -16,14 +18,16 @@ const Catagory = ({ catagory }) => {
   return (
     <div>
       <div class="card w-72 bg-base-200 shadow-xl ">
-        
-        <figure
-          onMouseEnter={onmouseenter}
-          onMouseLeave={onmouseleave}
-          className="hover:scale-125 hover:duration-300 hover:transition hover:ease-in relative h-48  "
-        >
-          <img className="h-full w-full" src={picture} alt={name} />
-        </figure>
+        <Link to={name === "Headphone/Airbuds"? "/airpods":"/"}>
+          <figure
+            onMouseEnter={onmouseenter}
+            onMouseLeave={onmouseleave}
+            className="hover:scale-125 hover:duration-300 hover:transition hover:ease-in relative h-48  "
+          >
+            <img className="h-full w-full" src={picture} alt={name} />
+          </figure>
+        </Link>
+
         {hover === true ? (
           <div class="card-body absolute bottom-0   py-3 px-3  text-primary bg-secondary/80 w-full">
             <h2 class="  card-title ">{name}</h2>
