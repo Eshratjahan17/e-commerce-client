@@ -122,7 +122,7 @@ const Catagories = () => {
             )}
           </div>
           <div class="card w-72 bg-base-200 shadow-xl ">
-            <Link to="">
+            <Link to="/SmartTv">
               <figure
                 onMouseEnter={onmouseenter}
                 onMouseLeave={onmouseleave}

@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Product = ({product}) => {
   const { picture ,name,price} = product;
+  const [clickCount,setClickCount]=useState(0);
+ 
+ 
+  const handleClick=()=>{
+    
+   
+    setClickCount(clickCount+1);
+    console.log(clickCount);
+    
+  }
   return (
     <div>
       <div class="card w-96 bg-base-100 shadow-xl">
@@ -13,7 +23,7 @@ const Product = ({product}) => {
           <p>{price}</p>
           <div class="card-actions justify-end">
             <button class="btn btn-primary">Details</button>
-            <button class="btn btn-primary">Buy Now</button>
+            <button class="btn btn-primary" onClick={handleClick}>Buy Now</button>
           </div>
         </div>
       </div>

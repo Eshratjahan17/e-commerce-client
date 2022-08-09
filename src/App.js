@@ -11,6 +11,7 @@ import NotFound from './Components/NotFound';
 import Phones from './Components/Phones/Phones';
 import SearchProduct from './Components/SearchProduct';
 import SignUp from './Components/SignUp';
+import SmartTv from './Components/SmartTv/SmartTv';
 import SmartWatchs from './Components/SmartWatchs/SmartWatchs';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/laptop" element={<Laptop></Laptop>}></Route>
         <Route path="/smartWatch" element={<SmartWatchs></SmartWatchs>}></Route>
         <Route path="/headphone" element={<Headphones></Headphones>}></Route>
+        <Route path="/SmartTv" element={<SmartTv></SmartTv>}></Route>
         <Route
           path="/searchProduct"
           element={<SearchProduct></SearchProduct>}
