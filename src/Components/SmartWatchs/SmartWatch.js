@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AppleWatch = () => {
+const SmartWatch = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const AppleWatch = () => {
   );
 };
 
-export default AppleWatch;
+export default SmartWatch;

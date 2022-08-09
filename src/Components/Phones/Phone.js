@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MacBook = () => {
+const Phone = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const MacBook = () => {
   );
 };
 
-export default MacBook;
+export default Phone;

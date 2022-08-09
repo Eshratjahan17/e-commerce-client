@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Airpod = ({ airpod }) => {
-    const {name,picture,price}= airpod
+const Headphone = ({ headphone }) => {
+  const { name, picture, price } = headphone;
   return (
     <div>
       <div class="card w-96 bg-base-100 shadow-xl">
@@ -21,4 +21,4 @@ const Airpod = ({ airpod }) => {
   );
 };
 
-export default Airpod;
+export default Headphone;

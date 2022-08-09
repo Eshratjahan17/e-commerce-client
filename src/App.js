@@ -1,17 +1,17 @@
 import { Route, Routes } from 'react-router';
 import './App.css';
-import Airpods from './Components/Airpods/Airpods';
 import AllProducts from './Components/AllProducts';
-import AppleWatchs from './Components/AppleWatchs/AppleWatchs';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
+import Headphones from './Components/Headphone/Headphones';
 import Home from './Components/Home';
-import Iphone from './Components/Iphones/Iphone';
+import Laptop from './Components/Laptop/Laptop';
 import Login from './Components/Login';
-import MacBooks from './Components/MacBooks/MacBooks';
 import NotFound from './Components/NotFound';
+import Phones from './Components/Phones/Phones';
 import SearchProduct from './Components/SearchProduct';
 import SignUp from './Components/SignUp';
+import SmartWatchs from './Components/SmartWatchs/SmartWatchs';
 
 function App() {
   return (
@@ -24,10 +24,10 @@ function App() {
           path="/allcatagory"
           element={<AllProducts></AllProducts>}
         ></Route>
-        <Route path="/iphone" element={<Iphone></Iphone>}></Route>
-        <Route path="/mac" element={<MacBooks></MacBooks>}></Route>
-        <Route path="/applewatch" element={<AppleWatchs></AppleWatchs>}></Route>
-        <Route path="/airpods" element={<Airpods></Airpods>}></Route>
+        <Route path="/phone" element={<Phones></Phones>}></Route>
+        <Route path="/laptop" element={<Laptop></Laptop>}></Route>
+        <Route path="/smartWatch" element={<SmartWatchs></SmartWatchs>}></Route>
+        <Route path="/headphone" element={<Headphones></Headphones>}></Route>
         <Route
           path="/searchProduct"
           element={<SearchProduct></SearchProduct>}

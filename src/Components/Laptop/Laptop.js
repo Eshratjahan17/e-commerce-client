@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Iphones = () => {
+const Laptop = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Iphones = () => {
   );
 };
 
-export default Iphones;
+export default Laptop;
