@@ -9,6 +9,7 @@ import Laptop from './Components/Laptop/Laptop';
 import Login from './Components/Login';
 import NotFound from './Components/NotFound';
 import Phones from './Components/Phones/Phones';
+import ProductDetails from './Components/ProductDetails/ProductDetails';
 import SearchProduct from './Components/SearchProduct';
 import SignUp from './Components/SignUp';
 import SmartTv from './Components/SmartTv/SmartTv';
@@ -24,6 +25,10 @@ function App() {
         <Route
           path="/allcatagory"
           element={<AllProducts></AllProducts>}
+        ></Route>
+        <Route
+          path="/allcatagory/:id"
+          element={<ProductDetails></ProductDetails>}
         ></Route>
         <Route path="/phone" element={<Phones></Phones>}></Route>
         <Route path="/laptop" element={<Laptop></Laptop>}></Route>
