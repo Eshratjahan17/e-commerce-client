@@ -6,14 +6,16 @@ const ProductDetails = () => {
   console.log(id);
   const [product,setProduct]=useState([]);
   useEffect(()=>{
-    fetch(`http://localhost:5000/allcatagory/${id}`)
-    .then(res=>res.json())
-    .then(data=>console.log(data))
+    const url = `http://localhost:5000/allcatagory/${id}`;
+    console.log(url);
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setProduct(data));
 
   },[]);
   return (
     <div>
-      
+     {product.name}
     </div>
   );
 };
